@@ -15,9 +15,6 @@ library(patchwork)
 
 For our second summative assessment, You will complete a task rather than a series of questions. The task is designed to draw on most of the skills we have practiced in class so far. You can find examples of everything you need to do in our course notes. The challenge here is to apply those lessons to produce a desired outcome.
 
-The only thing you have to do that we did not do in class is to read in a shapefile. So here is the code to read the shapefile with the watersheds used in the assessment:
-watersheds <- st_read("watersheds.shp")
-
 You will also need the following equation to convert flow from cfs to mm/day:
 
 Q in mm/day = 2.447 * (Qcfs / Area)
@@ -30,13 +27,13 @@ You need to summarize the discharge behavior of two watersheds for a project. Yo
 
 To summarize the discharge behavior of the Bluestone River and Wolf Creek from January 1, 1980 to January 1, 2020, produce the following two figures:
 
-1. A map showing the two watersheds. Make each wataershed a different color based on its name and be sure there is a legend that tells which colored watershed is which. Add the median flow for each watershed in mm/day as a text label in each watershed. Be sure the map has a legend, scale bar, and north arrow.
+1. A map showing the two watersheds. Make each watershed a different color based on its name and be sure there is a legend that tells which colored watershed is which. Add the median flow for each watershed in mm/day as a text label in each watershed. Be sure the map has a legend, scale bar, and north arrow.
 
 2. A single multi-panel figure that shows discharge for the two watersheds, where each watershed has it's own plot (ie don't put them both on one plot colored by name), and then another plot showing flow duration curves for both watersheds in one plot area, with the line for each watershed colored by name. The discharge plots and the flow duration curve plot should be made with discharge in units of mm/day. 
 
 *Hint: To make nice labels to add to the map for median flow, use mutate to add a new column that has the labels formatted the way you want. You can round the median flow with round() and add units with paste().
 
-*In the project folder are the shapefile of the watershed boundaries (there is code to read that in above), and gageids.csv, which contains the names of the gages/watersheds and other information, like the watershed area.
+*In the project folder are the shapefile of the watershed boundaries, and gageids.csv, which contains the names of the gages/watersheds and other information, like the watershed area.
 
 *Organize your code into chunks and describe what you did in each above the chunk. This will allow me to give you points even if the code doesn't do what it is supposed to.
 
